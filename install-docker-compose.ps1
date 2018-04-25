@@ -1,4 +1,5 @@
 # Download latest release from Github
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $downloadPageUri = 'https://github.com/docker/compose/releases/latest'
 
 # Go to site and identify file, then get it

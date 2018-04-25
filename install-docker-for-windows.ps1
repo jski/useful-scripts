@@ -1,7 +1,6 @@
 try {
     # Download installer and install
-    #$dockerMSIDownloadUri = 'https://download.docker.com/win/stable/InstallDocker.msi';
-    #$dockerMSIDownloadUri = 'https://download.docker.com/win/edge/InstallDocker.msi';$LocalTempDir = $env:TEMP;$DockerInstaller = "InstallDocker.msi";(new-object System.Net.WebClient).DownloadFile($dockerMSIDownloadUri, "$LocalTempDir\$DockerInstaller");Start-Process msiexec.exe -Wait -ArgumentList "/I $($LocalTempDir)\$($DockerInstaller) /quiet";
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     $dockerExeInstallerUri = 'https://download.docker.com/win/edge/Docker%20for%20Windows%20Installer.exe';
     $LocalTempDir = $env:TEMP;
     $DockerInstaller = "InstallDocker.exe";

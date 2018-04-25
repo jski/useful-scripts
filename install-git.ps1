@@ -1,4 +1,5 @@
 # Download latest release from Github
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $downloadPageUri = 'https://github.com/git-for-windows/git/releases/latest'
 
 # Go to site and identify file, then get it
